@@ -25,4 +25,17 @@ class Inventory{
 
         return removed
     }
+
+    fun inventoryPrint(){
+        if (items.isEmpty()){
+            println("Инвентарь пуст")
+            return
+        }
+
+        print("Содержимое инвенторя: ")
+
+        for (item in items){
+            println(item.name)з
+        }
+    }
 }
