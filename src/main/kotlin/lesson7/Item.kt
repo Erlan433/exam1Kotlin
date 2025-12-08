@@ -11,5 +11,5 @@ data class Item(
     val name: String,
     val description: String,
     val price: Int,
-    val count: Int = 1
+    var count: Int = 1
 )

@@ -30,6 +30,7 @@ fun main(){
     // Добавляем предметы в инвентарь игрока
     player.inventory.addItem(sword)
     player.inventory.addItem(potion)
+    player.inventory.removeItem(potion)
     // Отобразим инвентарь после подбора предмета в инвентарь
     player.inventory.inventoryPrint()
     // Сделать функцию inventoryPrint
