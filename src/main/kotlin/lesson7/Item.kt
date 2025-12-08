@@ -10,5 +10,6 @@ data class Item(
     //в то время как вторичный не обязательно задавать или изменить в процессе
     val name: String,
     val description: String,
-    val price: Int
+    val price: Int,
+    val count: Int = 1
 )

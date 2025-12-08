@@ -31,6 +31,7 @@ fun main(){
     player.inventory.addItem(sword)
     player.inventory.addItem(potion)
     // Отобразим инвентарь после подбора предмета в инвентарь
+    player.inventory.inventoryPrint()
     // Сделать функцию inventoryPrint
     // Которая через цикл for (item in items) выводит все элементы списка
 }
