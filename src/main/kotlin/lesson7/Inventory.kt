@@ -62,4 +62,26 @@ class Inventory{
 
         println("]")
     }
+
+    fun findItemByName(name: String): Item?{
+        for (item in items){
+            if (item.name == name){
+                println("Найдено: ${item.name}, Описание: ${item.description}")
+                return item
+            }
+        }
+        println("Предмет с именем $name не найден")
+        return null
+    }
+
+    fun findItemById(id: Int): Item?{
+        for (item in items){
+            if (item.id == id){
+                println("Найден предмет с id ${item.id}, Описание: ${item.description}")
+                return item
+            }
+        }
+        println("Предмет с id $id не найден")
+        return null
+    }
 }

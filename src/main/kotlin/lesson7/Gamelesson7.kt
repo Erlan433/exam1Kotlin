@@ -4,6 +4,7 @@ class Player(
     val name: String
 ){
     val inventory = Inventory()
+    val chest = Chest()
 }
 
 // Точка вход в программу
@@ -27,12 +28,19 @@ fun main(){
         20
     )
 
+    val molotTora = Item(
+        3,
+        "Молот Тора",
+        "Бьется молнией",
+        1000
+    )
+
     // Добавляем предметы в инвентарь игрока
     player.inventory.addItem(sword)
     player.inventory.addItem(potion)
-    player.inventory.removeItem(potion)
     // Отобразим инвентарь после подбора предмета в инвентарь
     player.inventory.inventoryPrint()
-    // Сделать функцию inventoryPrint
-    // Которая через цикл for (item in items) выводит все элементы списка
+    player.inventory.findItemByName("Меч железный")
+    player.inventory.findItemById(2)
+    player.chest.open(player)
 }
