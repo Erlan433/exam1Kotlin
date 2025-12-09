@@ -28,16 +28,12 @@ fun main(){
         20
     )
 
-    val molotTora = Item(
-        3,
-        "Молот Тора",
-        "Бьется молнией",
-        1000
-    )
-
     // Добавляем предметы в инвентарь игрока
     player.inventory.addItem(sword)
     player.inventory.addItem(potion)
+    player.chest.addItem(sword)
+    player.chest.addItem(potion)
+    //player.chest.addItem(hammer)
     // Отобразим инвентарь после подбора предмета в инвентарь
     player.inventory.inventoryPrint()
     player.inventory.findItemByName("Меч железный")

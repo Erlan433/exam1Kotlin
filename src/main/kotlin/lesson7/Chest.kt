@@ -21,20 +21,22 @@ class Chest {
 
         print("Содержимое сундука: [")
         for (item in chestItems){
-            println("[${item.name}, ${item.description}]")
+            print("[${item.name}, ${item.description}]")
         }
         println("]")
 
-        for (item in chestItems){
+        val tempChestItems = chestItems.toMutableList()
+        for (item in tempChestItems){
             player.inventory.addItem(item)
             removeItem(item)
         }
 
         print("Содержимое сундука: [")
         for (item in chestItems){
-            println("[${item.name}, ${item.description}]")
+            print("[${item.name}, ${item.description}]")
         }
+        println("]")
 
-        
+        player.inventory.inventoryPrint()
     }
 }
