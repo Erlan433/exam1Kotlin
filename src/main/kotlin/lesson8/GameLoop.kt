@@ -19,6 +19,8 @@ fun main(){
     player.printPosition()
     enemy.printPosition()
 
+    val maxBattleTimeSeconds = 5.0
+
     while (true){
         // Каждая итерация цикла - будет для нас игровым кадром
         gameTime.update()
@@ -46,5 +48,9 @@ fun main(){
             break // прерывает выполните цикла while
         }
 
+        if (gameTime.totalTimeSeconds >= maxBattleTimeSeconds) {
+            println("Время боя истекло!")
+            break
+        }
     }
 }
